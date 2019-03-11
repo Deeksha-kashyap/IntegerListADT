@@ -11,14 +11,14 @@ public class IntegerListADT {
     int get(int index)
     {
 
-        int item = 0;
+        int element = 0;
         // check if list is not empty
         if (!isEmpty())
         {
-            item = list[index];
+            element  = list[index];
         }
 
-        return item;
+        return element;
     }
 
     //	create method for inserting a value in the list
@@ -40,17 +40,14 @@ public class IntegerListADT {
 
     int remove(int value)
     {
-        int item = 0;
+        int element = 0;
         if (!isEmpty()) //  check if the list is not empty
         {
             for (int i = 0; i < list.length; i++)
             {
-                // check if the value is in the list
                 if (list[i] == value)
                 {
-                    item = list[i];
-                    //  list[index] = 0;
-                    // optional code
+                    element = list[i];
                     int j = 0;
                     for (j = i; j < list.length - 1; j++)
                     {
@@ -61,7 +58,7 @@ public class IntegerListADT {
                 }
             }
         }
-        return item;
+        return element;
     }
 
     int removeAt(int index)
